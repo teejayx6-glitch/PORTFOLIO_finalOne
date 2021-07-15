@@ -1,0 +1,76 @@
+body{
+  
+}
+header{
+    margin-top: 0;
+    font-family: 'Encode Sans SC', sans-serif;font-family: 'Encode Sans SC', sans-serif;
+    position: sticky;
+    font-weight: 100px;
+    -webkit-box-shadow: 0 3px 3px 1px #ccc;
+    -moz-box-shadow:0 3px 3px 1px #ccc; 
+    box-shadow:0 3px 3px 1px #ccc;
+    }
+.mr-5{
+    margin: 0 20px;
+
+    
+}
+.mr-5:hover{
+  background-color: lightgray;
+  padding: 4px;
+  border-radius: 15%;
+  opacity:0.5;
+  
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .rounded-t:hover{
+
+    background-color: rgb(151, 151, 151);
+    opacity: 1;
+    color:black;
+  }
+  .mr-1:hover{
+    background-color: lightgray;
+    padding: 4px;
+    border-radius: 15%;
+    opacity:0.5;
+  }
+  .glow:hover {
+    
+    color: #000;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 1px #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000
+      ;
+    }
+    
+    to {
+      text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000
+      , 0 0 60px #000
+      ;
+    }
+  }
+  .glow2:hover{
+    color: #000;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 1px #000, 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000
+      ;
+    }
+    
+    to {
+      text-shadow: 0 0 2px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000
+      ;
+    }
+
+  }

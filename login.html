@@ -1,0 +1,441 @@
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Register : )</title>
+                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+                                <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <style>body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #000;
+    background-repeat: no-repeat
+}
+
+.card {
+    width: 32%;
+    padding: 30px;
+    box-shadow: 0px 8px 16px 0px #000000;
+    max-width: 511px
+}
+
+.card0 {
+    width: 100%;
+    padding-right: 30px;
+    box-shadow: none
+}
+
+.card1 {
+    background: url("/images/4.jpeg");
+    min-height: 600px
+}
+
+.btn-yellow {
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px
+}
+
+.btn-yellow:hover {
+    background-color: #000000;
+    border: 2px solid #000000
+}
+
+.btn-inverse {
+    border: 2px solid #000000;
+    background-color: transparent;
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: 1px
+}
+
+.btn-inverse:hover {
+    background-color: #000000;
+    color: #fff;
+    border: 2px solid #000000
+}
+
+::placeholder {
+    color: #E0E0E0;
+    opacity: 1
+}
+
+:-ms-input-placeholder {
+    color: #E0E0E0
+}
+
+::-ms-input-placeholder {
+    color: #E0E0E0
+}
+
+input {
+    padding: 1px 0px 3px 0px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 3px;
+    margin-top: 2px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500
+}
+
+input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #EF5350;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a:hover {
+    color: inherit
+}
+
+.text-sm {
+    font-size: 14px
+}
+
+.text-dim {
+    color: #BDBDBD
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer
+}
+
+@media screen and (max-width: 1056px) {
+    .card {
+        width: 100%
+    }
+
+    .align {
+        justify-content: center !important
+    }
+
+}
+
+.menu-toggle {
+      display: none;
+  }
+  
+  .mobile-bar {
+      z-index: 10;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0 25px;
+      /*BAR HOW MUCH IN RIGHT*/
+      width: 100%;
+      height: 65px;
+      background-color: white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .menu-icon {
+      float: right;
+      display: block;
+      position: relative;
+      width: 25px;
+      height: 100%;
+      cursor: pointer;
+      transition: transform 300ms ease-in;
+      /*the bar to X*/
+  }
+  
+  .menu-icon > span {
+      display: block;
+      position: absolute;
+      top: 55%;
+      margin-top: -0.3em;
+      width: 100%;
+      height: 0.199em;
+      border-radius: 1px;
+      background-color: #696969;
+      transition: transform 300ms ease-in;
+  }
+  
+  .menu-icon > span:before,
+  .menu-icon > span:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 1px;
+      background-color: #696969;
+      transition: transform 300ms ease;
+  }
+  
+  .menu-icon > span:before {
+      transform: translateY(-0.6em);
+  }
+  
+  .menu-icon > span:after {
+      transform: translateY(0.6em);
+  }
+  
+  
+  /*need this for bringing down the examples*/
+  
+  .menu-toggle:checked + .mobile-bar .menu-icon {
+      transform: rotate(45deg);
+  }
+  
+  .menu-toggle:checked + .mobile-bar span:before,
+  .menu-toggle:checked + .mobile-bar span:after {
+      transform: rotate(90deg);
+  }
+  
+  
+  /*needed*/
+  
+  .menu-toggle:checked ~ .header {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+  }
+  
+  .header {
+      z-index: 1;
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 60px;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      padding-right: 5.7px;
+      color: #eee;
+      transition: opacity 300ms ease-in, visibility 0s ease-in 300ms;
+    box-shadow: 0 1px 15px -5px gray;
+  }
+  
+  .header nav,
+  .header ul {
+      height: 100%;
+  }
+  
+  .header li {
+      border-bottom: 1px solid #eee;
+      color: #505050;
+      /*text on navbar*/
+      font-weight: 430;
+      line-height: 2.4;
+      /*height of the navbar*/
+      font-size: 15px;
+      letter-spacing: 0.2px;
+      font-weight: 600;
+  }
+  
+  .header li:hover {
+      color: #696969;
+      transition: color 300ms ease-in;
+  }
+  
+  .header a {
+      display: block;
+      padding: 25px;
+      transition: background-color 300ms ease-in;
+  }
+  
+  .navbar-brand {
+      padding: 0px;
+  }
+  
+  .navbar-brand>img {
+      height: 40px;
+      width: auto;
+      z-index: 10;
+      position: fixed;
+      top: 13.45px;
+      left: 0;
+      padding: 0 25px;
+      /*BAR HOW MUCH IN RIGHT*/
+      background-color: white;
+  }
+  
+  .test {
+      top: 0;
+      width: 100%;
+      position: fixed;
+  }
+  
+  
+  @media (min-width: 1000px) {
+      .mobile-bar {
+          display: none;
+      }
+      .header {
+          z-index: 5;
+          position: relative;
+          left: 0;
+          padding-top: 0;
+          width: 100%;
+          height: auto;
+          overflow: auto;
+          visibility: visible;
+          opacity: 1;
+          text-align: right;
+      }
+      .header li {
+          display: inline-block;
+          margin-right: -6px;
+          /* fix the inline-block gap */
+          border: none;
+          text-align: left;
+      }
+      .header a {
+          padding: 15px 35px;
+          /*header height and text spacing*/
+      }
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus,
+  a:active {
+      text-decoration: none;
+  }
+  
+  *,
+  *:before,
+  *:after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+   /*******************/
+  
+  
+  @media only screen and (max-width: 600px) {
+      body[yahoo] .full_width_600 {
+          width: 90% !important;
+      }
+  }
+  
+  @media only screen and (max-width: 700px) {
+      body[yahoo] .full_width_700 {
+          width: 100% !important;
+      }
+      body[yahoo] .txt_center {
+          text-align: center !important;
+      }
+      body[yahoo] .separator {
+          height: 40px !important;
+      }
+  }
+  ol,
+  ul {
+      list-style: none;
+  }
+  
+  a {
+      text-decoration: none;
+      color: inherit;
+  }
+  p {
+      margin: 0.9em 0;
+      line-height: 1.5;
+  }
+</style>
+                                </head>
+                                <body oncontextmenu='return false' class='snippet-body'>
+                                    <div>
+                                        <div class="test">
+                                            <input type="checkbox" class="menu-toggle" id="menu-toggle">
+                                            <div class="mobile-bar">
+                                                <label for="menu-toggle" class="menu-icon">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                    
+                                            <header class="header">
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="/index.html">HOME</a></li>
+                                                        <li><a href="/styling.html">STYLING</a></li>
+                                                        <li><a href="/art.html">ART</a></li>
+                                                        <li><a href="/about/About.html">ABOUT</a></li>
+                                                        <li><a href="/contact/contact2.html">CONTACT</a></li>
+                                                        
+                                                    </ul>
+                                                </nav>
+                                            </header>
+                                    
+                                            <a class="navbar-brand" href="https://codepen.io/conorjmcnamara/" style="padding:0px;">
+                                                <img src="/Screenshot 2021-07-09 at 10.10.00 AM.png">
+                                            </a>
+                                    
+                                        </div>
+                                    </div>
+                                        <script defer src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+                                    
+                                      
+                                          <script defer id="rendered-js">
+                                    window.onscroll = function () {myFunction();};
+                                    
+                                    var navbar = document.getElementById("navbar");
+                                    var sticky = navbar.offsetTop;
+                                    
+                                    function myFunction() {
+                                      if (window.pageYOffset >= sticky) {
+                                        navbar.classList.add("sticky");
+                                      } else {
+                                        navbar.classList.remove("sticky");
+                                      }
+                                    }
+                                    //# sourceURL=pen.js
+                                        </script>
+                                    
+                                    
+                                    <div class="container-fluid px-4 px-md-4 py-5 mx-auto mt-5" style="position:absolute;z-index: -1;margin-top:10px;">
+                                        <div class="row d-flex justify-content-between align">
+                                            <div class="card card1 mw-100 border-0 rounded-0 mb-5 " style="width:65%;">
+                                               
+                                                <div class="row mt-auto mb-2">
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card border-0 rounded-0 mb-5">
+                                                <h1 class="mb-2 "><b style="font-size: 30px;">Register As User</b></h1> <small><b>Enter your details below</b></small>
+                                                <div class="row px-3 mt-4 mb-3">
+                                                    <div class="custom-control custom-radio custom-control-inline"> 
+                                                        <form action="/thankyou.php" method="POST">
+                                                        <input id="customRadioInline1" type="radio" name="customRadioInline1" checked class="custom-control-input" > <label for="customRadioInline1" value="Individual" class="custom-control-label text-sm">Individual</label> </div>
+                                                    <div class="custom-control custom-radio custom-control-inline"> <input id="customRadioInline2" type="radio" name="customRadioInline1" class="custom-control-input"> <label value="Company" for="customRadioInline2" class="custom-control-label text-sm">Company</label> </div>
+                                                </div> <label class="font-weight-bold mb-0">Fullname</label> <input type="text" name="name" class="mb-4" placeholder="John Harry" required> <label class="font-weight-bold mb-0">Email*</label> <input type="email" name="email" class="mb-4" placeholder="abc@xyz.com" required> <label class="font-weight-bold mb-0">Phone Number</label> <input type="tel" name="phno" class="mb-4" placeholder="1234567890" maxlength="10" > <label class="font-weight-bold mb-0" >Password</label> <input type="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" minlength="8"> <small class="text-muted">Min length is 8 characters</small>
+                                                <div class="custom-control custom-checkbox custom-control-inline mt-4"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input" checked required> <label for="chk1" class="custom-control-label text-sm">I agree with Terms of Service, Terms of Payments and Privacy Policy.</label> </div>
+                                                <div class="row px-3 mt-5">
+                                                    <input type="submit" value="Register" class="btn btn-yellow px-3 mr-3">  </div>
+                                            </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+                                <script type='text/javascript'></script>
+                                </body>
+                            </html>
